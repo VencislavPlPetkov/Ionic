@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Ionic  
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+
+		<ion-item>
+			<ion-label fixed>Nameeeee</ion-label>
+			<ion-input [(ngModel)]="name" type="text"></ion-input>
+	    </ion-item>
+
+		<ion-item>
+			<ion-label fixed>Title</ion-label>
+			<ion-input [(ngModel)]="title" type="text"></ion-input>
+		</ion-item>
+
+	</ion-list>
+
+	
+	<button (click)="submitUser()" ion-button>Save</button> 
+	<button (click)="setData()" ion-button>Test</button> 
+
+
+	<!-- <ion-list>
+
+  		<button (click)="handleClick(employee)" ion-item *ngFor="let employee of employees">
+  		<ion-avatar item-left>
+  			<img [src]="employee.picture">
+  		</ion-avatar>
+  		<h2>{{employee.name}}</h2>
+  		<p>{{employee.title}}</p>
+  		</button>
+  
+ 	</ion-list> -->
+
+ 	<ion-list>
+
+  		<button (click)="handleClick(employee)" ion-item *ngFor="let employee of this.userService.allHorses">
+  		<ion-avatar item-left>
+  			<img [src]="employee.picture">
+  		</ion-avatar>
+  		<h2>{{employee.name}}</h2>
+  		<p>{{employee.title}}</p>
+  		</button>
+  
+ 	</ion-list>
+
+
+
+
+
+</ion-content>
+ 
