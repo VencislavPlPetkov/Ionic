@@ -3,6 +3,8 @@ import { Storage } from '@ionic/storage';
 import { NavController, ModalController, Events } from 'ionic-angular';
 import { SecondPage } from '../second/second';
 import { UserProvider } from '../../providers/user/user';
+import PouchDB from 'pouchdb';
+
    
 
 @Component({
@@ -24,6 +26,12 @@ export class HomePage {
 		// 	{picture:'http://placehold.it/75', name:'Jocob', title: 'Actor'}
 
 		// ];
+	}
+
+	ionViewDidLoad(){
+
+		console.log(PouchDB);
+
 	}
 
 
